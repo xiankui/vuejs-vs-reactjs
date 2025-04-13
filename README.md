@@ -1,4 +1,4 @@
-# Learn VueJs by compare with ReactJs (TaskBoard)
+# Learn VueJs by compare with ReactJs (TodoApp)
 
 ## Branches of step
 
