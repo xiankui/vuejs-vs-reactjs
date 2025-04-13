@@ -12,8 +12,8 @@ export const TodoItem = ({ todo, onToggle }: Props) => (
       onClick={() => onToggle(todo.id)}
       className={
         todo.completed
-          ? "line-through text-gray-400 cursor-pointer"
-          : "cursor-pointer"
+          ? "line-through text-gray-400 cursor-pointer w-full"
+          : "cursor-pointer w-full"
       }
     >
       {todo.text}
