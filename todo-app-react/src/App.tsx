@@ -1,17 +1,30 @@
 import React, { useState } from "react";
-import { useTodos } from "./hooks/useTodos";
+
+// import { useTodos } from "./hooks/useTodos";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "./store";
+import { addTodo, toggleTodo } from "./store/todoSlice";
+
 import { TodoItem } from "./components/TodoItem";
 
 function App() {
   const [input, setInput] = useState("");
-  const { todos, addTodo, toggleTodo } = useTodos();
+  // const { todos, addTodo, toggleTodo } = useTodos();
+
+  const todos = useSelector((state: RootState) => state.todos.todos);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
-      addTodo(input);
+      // addTodo(input);
+      dispatch(addTodo(input));
       setInput("");
     }
+  };
+
+  const handleToggle = (id: number) => {
+    dispatch(toggleTodo(id));
   };
 
   return (
@@ -29,7 +42,7 @@ function App() {
       </form>
       <ul>
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} />
+          <TodoItem key={todo.id} todo={todo} onToggle={handleToggle} />
         ))}
       </ul>
     </div>
