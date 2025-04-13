@@ -1,5 +1,25 @@
 # Learn VueJs by compare with ReactJs (TaskBoard)
 
+## Branches of step
+
+### step1-usestate
+
+数据状态变化：useState vs ref, reactive
+
+![数据状态变化：useState vs ref, reactive](step1-compare.png)
+
+### step2-useeffect
+
+数据变化后的副作用处理：useEffect vs watch
+
+![数据变化后的副作用处理：useEffect vs watch](step2-compare.png)
+
+### step3-redux
+
+状态管理对比：Redux Toolkit vs Pinia
+
+![状态管理对比：Redux Toolkit vs Pinia](step3-compare.png)
+
 ## React vs Vue
 
 - pass props -> pass props
