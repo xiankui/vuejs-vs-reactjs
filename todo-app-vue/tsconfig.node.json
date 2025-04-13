@@ -1,0 +1,10 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json", // 修改此处关键路径
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.*"]
+}

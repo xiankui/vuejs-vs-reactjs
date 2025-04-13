@@ -1,0 +1,12 @@
+// tsconfig.app.json (扩展基础配置)
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
