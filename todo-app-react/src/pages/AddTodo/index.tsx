@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { addTodo } from "../store/todoSlice";
+import { useNavigate, Link } from "react-router-dom";
+import { addTodo } from "../../store/todoSlice";
 import { useDispatch } from "react-redux";
 
 const AddTodo = () => {
@@ -26,6 +26,7 @@ const AddTodo = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className="border p-2 flex-1"
+          placeholder="Enter todo text"
         />
         <button
           type="submit"
@@ -34,6 +35,9 @@ const AddTodo = () => {
           Add
         </button>
       </form>
+      <Link to="/" className="mt-6 inline-block text-blue-500 hover:underline">
+        返回列表
+      </Link>
     </div>
   );
 };

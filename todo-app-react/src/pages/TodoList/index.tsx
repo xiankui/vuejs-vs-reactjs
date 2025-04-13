@@ -1,13 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../store";
-import { toggleTodo } from "../store/todoSlice";
+import { RootState } from "../../store";
+import { toggleTodo } from "../../store/todoSlice";
 
-import { TodoItem } from "../components/TodoItem";
+import { TodoItem } from "../../components/TodoItem";
 
 function TodoList() {
-  const navigate = useNavigate();
   const todos = useSelector((state: RootState) => state.todos.todos);
   const dispatch = useDispatch();
 
@@ -23,12 +22,12 @@ function TodoList() {
           <TodoItem key={todo.id} todo={todo} onToggle={handleToggle} />
         ))}
       </ul>
-      <button
-        onClick={() => navigate("/add")}
-        className="bg-blue-500 text-white px-4 py-2 mt-4 w-full hover:bg-blue-600"
+      <Link
+        to="/add"
+        className="mt-6 inline-block text-blue-500 hover:underline"
       >
-        Add Todo
-      </button>
+        ➕ 添加任务
+      </Link>
     </div>
   );
 }
