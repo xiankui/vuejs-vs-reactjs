@@ -3,7 +3,7 @@
  */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Todo } from "../types/todo";
-import { STORAGE_KEY } from "../middleware/persistTodos";
+import { STORAGE_KEYS } from "../constants/storage";
 
 interface TodoState {
   todos: Todo[];
@@ -11,7 +11,7 @@ interface TodoState {
 
 // Define the initial state and load from local storage
 const initialState: TodoState = {
-  todos: JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"),
+  todos: JSON.parse(localStorage.getItem(STORAGE_KEYS.TODOS) || "[]"),
 };
 
 const todoSlice = createSlice({
