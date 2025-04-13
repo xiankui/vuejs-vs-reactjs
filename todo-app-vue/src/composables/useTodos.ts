@@ -1,7 +1,7 @@
 import { ref, watch } from "vue";
 import type { Todo } from "../types/todo";
 
-const STORAGE_KEY = "react-todos";
+const STORAGE_KEY = "vue-todos";
 
 export const useTodos = () => {
   // 使用 ref 创建响应式数据

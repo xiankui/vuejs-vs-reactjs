@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useTodos } from "./composables/useTodos";
+
+// import { useTodos } from "./composables/useTodos";
+import { useTodoStore } from "./stores/todo";
+
 import TodoItem from "./components/TodoItem.vue";
 
 const input = ref("");
-const { todos, addTodo, toggleTodo } = useTodos();
+const { todos, addTodo, toggleTodo } = useTodoStore();
 
 const handleSubmit = () => {
   if (input.value.trim()) {
