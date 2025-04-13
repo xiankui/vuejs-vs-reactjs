@@ -1,19 +1,26 @@
 <script setup lang="ts">
-import { useTodoStore } from "@/stores/todo";
-import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { useTodoStore } from "../../stores/todo";
+import TodoItem from "../../components/TodoItem.vue";
 
-const router = useRouter();
-const todoStore = useTodoStore();
-const text = ref("");
-
-const handleSubmit = () => {
-  todoStore.addTodo(text.value);
-  router.push("/");
-};
+const { todos, toggleTodo } = useTodoStore();
 </script>
 
 <template>
-  <input v-model="text" />
-  <button @click="handleSubmit">添加</button>
+  <div class="max-w-xl mx-auto mt-10">
+    <h1 class="text-2xl font-bold mb-4 text-center">Vue Todo List</h1>
+    <ul>
+      <TodoItem
+        v-for="todo in todos"
+        :key="todo.id"
+        :todo="todo"
+        @toggle="toggleTodo(todo.id)"
+      />
+    </ul>
+    <router-link
+      to="/add"
+      className="mt-6 inline-block text-blue-500 hover:underline"
+    >
+      ➕ 添加任务
+    </router-link>
+  </div>
 </template>

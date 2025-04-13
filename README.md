@@ -20,6 +20,12 @@
 
 ![状态管理对比：Redux Toolkit vs Pinia](step3-compare.png)
 
+### step4-router
+
+路由对比：React Router vs Vue Router
+
+![路由对比：React Router vs Vue Router](step4-compare.png)
+
 ## React vs Vue
 
 - pass props -> pass props
