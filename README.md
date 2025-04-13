@@ -26,6 +26,8 @@
 - pass function and callback -> pass function and emit
 - useState -> ref, reactive (only for complex object)
 - useEffect -> watch
+- hooks -> Composable API
+- Redux Toolkit -> Pinia (pinia is really concise)
 
 ## 核心差异
 
