@@ -2,6 +2,7 @@
 import { useTodoStore } from "../../stores/todo";
 import TodoItem from "../../components/TodoItem.vue";
 import TodoStats from "../../components/TodoStats.vue";
+import TodoEmptyNotice from "../../components/TodoEmptyNotice.vue";
 
 const { todos, toggleTodo } = useTodoStore();
 </script>
@@ -24,5 +25,6 @@ const { todos, toggleTodo } = useTodoStore();
       ➕ 添加任务
     </router-link>
     <TodoStats />
+    <TodoEmptyNotice />
   </div>
 </template>

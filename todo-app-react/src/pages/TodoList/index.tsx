@@ -6,6 +6,7 @@ import { toggleTodo } from "../../store/todoSlice";
 
 import TodoItem from "../../components/TodoItem";
 import TodoStats from "../../components/TodoStats";
+import TodoEmptyNotice from "../../components/TodoEmptyNotice";
 
 function TodoList() {
   const todos = useSelector((state: RootState) => state.todos.todos);
@@ -30,6 +31,7 @@ function TodoList() {
         ➕ 添加任务
       </Link>
       <TodoStats />
+      <TodoEmptyNotice />
     </div>
   );
 }

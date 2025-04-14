@@ -32,6 +32,12 @@
 
 ![性能优化对比 —— computed vs useMemo/useCallback](step5-compare.png)
 
+### step6-template
+
+模板渲染差异 —— v-if vs && / 三元表达式
+
+![模板渲染差异 —— v-if vs && / 三元表达式](step6-compare.png)
+
 ## React vs Vue
 
 - pass props -> pass props
