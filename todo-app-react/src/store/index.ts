@@ -6,6 +6,17 @@ export const store = configureStore({
   reducer: {
     todos: todoReducer,
   },
+  /**
+   * middleware: (getDefaultMiddleware) =>
+   *   getDefaultMiddleware().concat(persistTodos)
+   *
+   * 1. getDefaultMiddleware(): returns an array of middleware functions that
+   *    are included in Redux Toolkit by default.
+   * 2. concat(persistTodos): adds the persistTodos middleware to the array.
+   *
+   * persistTodos is a middleware function that listens for actions on the
+   * todos slice of the state and persists the state to local storage.
+   */
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(persistTodos),
 });

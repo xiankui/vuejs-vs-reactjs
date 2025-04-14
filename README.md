@@ -26,6 +26,10 @@
 
 ![路由对比：React Router vs Vue Router](step4-compare.png)
 
+### step5-usememo
+
+性能优化对比 —— computed vs useMemo/useCallback
+
 ## React vs Vue
 
 - pass props -> pass props

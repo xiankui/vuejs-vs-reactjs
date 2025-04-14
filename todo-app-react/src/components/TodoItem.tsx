@@ -6,7 +6,7 @@ type Props = {
   onToggle: (id: number) => void;
 };
 
-export const TodoItem = ({ todo, onToggle }: Props) => (
+const TodoItem = ({ todo, onToggle }: Props) => (
   <li className="flex justify-between items-center p-2 border-b">
     <span
       onClick={() => onToggle(todo.id)}
@@ -20,3 +20,5 @@ export const TodoItem = ({ todo, onToggle }: Props) => (
     </span>
   </li>
 );
+
+export default TodoItem;

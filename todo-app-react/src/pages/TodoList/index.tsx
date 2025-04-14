@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
 import { toggleTodo } from "../../store/todoSlice";
 
-import { TodoItem } from "../../components/TodoItem";
+import TodoItem from "../../components/TodoItem";
+import TodoStats from "../../components/TodoStats";
 
 function TodoList() {
   const todos = useSelector((state: RootState) => state.todos.todos);
@@ -28,6 +29,7 @@ function TodoList() {
       >
         ➕ 添加任务
       </Link>
+      <TodoStats />
     </div>
   );
 }
