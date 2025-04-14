@@ -30,6 +30,8 @@
 
 性能优化对比 —— computed vs useMemo/useCallback
 
+![性能优化对比 —— computed vs useMemo/useCallback](step5-compare.png)
+
 ## React vs Vue
 
 - pass props -> pass props

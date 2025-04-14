@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useTodoStore } from "../../stores/todo";
 import TodoItem from "../../components/TodoItem.vue";
+import TodoStats from "../../components/TodoStats.vue";
 
 const { todos, toggleTodo } = useTodoStore();
 </script>
@@ -22,5 +23,6 @@ const { todos, toggleTodo } = useTodoStore();
     >
       ➕ 添加任务
     </router-link>
+    <TodoStats />
   </div>
 </template>
